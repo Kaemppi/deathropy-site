@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-  font-family: "Pillbox", system-ui, -apple-system, "Segoe UI",Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'UnifrakturCook';
   text-align: center;
   font-size: 2em;
   font-weight: 200;
@@ -48,6 +48,10 @@ h3 {
   align-items: center;
   justify-content: center;
   padding: 36px;
+}
+
+.container.hero {
+  height: 100vh
 }
 
 .container.band {
