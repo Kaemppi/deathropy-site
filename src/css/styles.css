@@ -1,18 +1,45 @@
+
+@font-face {
+  font-family: "Pillbox";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/pillbox.woff2") format("woff2"),
+       url("../assets/fonts/pillbox.woff") format("woff"),
+       url("../assets/fonts/pillbox.ttf") format("truetype");
+}
+
 body {
-  font-family: Arial, sans-serif;
   background-color: #121212;
   color: #e0e0e0;
   margin: 0;
   padding: 0;
-  font-family: "UnifrakturCook";
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
   font-style: normal;
 }
 
 h1 {
+  font-family: "Pillbox", system-ui, -apple-system, "Segoe UI",Roboto, "Helvetica Neue", Arial, sans-serif;
   text-align: center;
   font-size: 2em;
   font-weight: 200;
   margin-top: 20px;
+}
+
+h2, h3 {
+  font-family: 'UnifrakturCook';
+  text-align: center;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 5em;
+}
+
+h3 {
+  font-size: 3em;
 }
 
 .container {
@@ -20,13 +47,140 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   padding: 36px;
+}
+
+.container.band {
+  background-image: url('../assets/images/promo.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+  position: relative;
+}
+
+.overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-embed-container {
+  margin-top: 20px;
+}
+
+.video-embed-container h2 {
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;  
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
 }
 
 .logo {
   width: 100%;
-  max-width: 640px;
+  max-width: 960px;
   height: auto;
+  margin-top: 15%;
   margin-bottom: 20px;
+}
+
+.band-members {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 180px;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 150px;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.single-art-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 36px;
+}
+
+.single-art {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.single-art:hover {
+  transform: scale(1.05);
+}
+
+dt {
+  font-family: 'UnifrakturCook';
+  margin-top: 10px;
+}
+
+dd {
+  margin-bottom: 10px;
+}
+
+.spotify-embed {
+  width: 100%;
+  max-width: 800px;
+  height: 630px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  border: none;
+}
+
+a {
+  display: block;
+  color: #e0e0e0;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.align-center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  .container.band {
+    max-height: 45vh;
+  }
+
+  iframe {
+    height: 50vh;
+  }
+
+  .band-members {
+    gap: 0;
+    bottom: 0;
+  }
 }
