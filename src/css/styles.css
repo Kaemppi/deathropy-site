@@ -42,6 +42,44 @@ h3 {
   font-size: 3em;
 }
 
+.call-to-action-black {
+  border: 4px solid #000;
+  color: #000;
+  background-color: transparent;
+  padding: 12px 24px;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 20px auto;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.call-to-action-black:hover {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.call-to-action-white {
+  border: 4px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  padding: 12px 24px;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 20px auto;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.call-to-action-white:hover {
+  background-color: #fff;
+  color: #121212;
+  text-decoration: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -50,11 +88,21 @@ h3 {
   padding: 36px;
 }
 
+.container.full {
+  height: 100vh;
+}
+
 .container.hero {
   height: 100vh;
   background-image: url('../assets/images/background.webp');
   background-position: center center;
   background-size: cover;
+}
+
+.container.merch {
+  height: 100vh;
+  background-color: #fff;
+  color: #121212;
 }
 
 .container.band {
@@ -78,6 +126,7 @@ h3 {
 
 .video-embed-container {
   margin-top: 20px;
+  background-color: #000;
 }
 
 .video-embed-container h2 {
