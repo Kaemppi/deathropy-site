@@ -1,16 +1,16 @@
 
 @font-face {
-  font-family: "Pillbox";
+  font-family: "GebetbuchFraktur";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../assets/fonts/pillbox.woff2") format("woff2"),
-       url("../assets/fonts/pillbox.woff") format("woff"),
-       url("../assets/fonts/pillbox.ttf") format("truetype");
+  src: url("../assets/fonts/GebetbuchFraktur.woff2") format("woff2"),
+       url("../assets/fonts/GebetbuchFraktur.woff") format("woff"),
+       url("../assets/fonts/GebetbuchFraktur.ttf") format("truetype");
 }
 
 body {
-  background-color: #121212;
+  background-color: #000;
   color: #e0e0e0;
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-  font-family: 'UnifrakturCook';
+  font-family: 'GebetbuchFraktur';
   text-align: center;
   font-size: 2em;
   font-weight: 200;
@@ -28,7 +28,8 @@ h1 {
 }
 
 h2, h3 {
-  font-family: 'UnifrakturCook';
+    color: #E11313;
+  font-family: 'GebetbuchFraktur';
   text-align: center;
   font-weight: 400;
   margin: 10px 0;
@@ -42,9 +43,20 @@ h3 {
   font-size: 3em;
 }
 
-.call-to-action-black {
-  border: 4px solid #000;
-  color: #000;
+hr {
+  color: #333
+}
+
+.highlight {
+  color: #E11313;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.call-to-action {
+  border: 4px solid;
   background-color: transparent;
   padding: 12px 24px;
   font-size: 1.5em;
@@ -52,32 +64,64 @@ h3 {
   margin: 20px auto;
   display: inline-block;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.call-to-action-black:hover {
-  background-color: #000;
+.call-to-action.white {
   color: #fff;
-  text-decoration: none;
+  border-color: #fff;
 }
 
-.call-to-action-white {
-  border: 4px solid #fff;
-  color: #fff;
-  background-color: transparent;
-  padding: 12px 24px;
-  font-size: 1.5em;
-  text-align: center;
-  margin: 20px auto;
-  display: inline-block;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.call-to-action-white:hover {
+.call-to-action.white:hover {
   background-color: #fff;
   color: #121212;
+  border-color: #fff;
   text-decoration: none;
+}
+
+.call-to-action.black {
+  color: #000;
+  border-color: #000;
+}
+
+.call-to-action.black:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  text-decoration: none;
+}
+
+.call-to-action.red {
+  color: #E11313;
+  border-color: #E11313;
+}
+
+.call-to-action.red:hover {
+  background-color: #E11313;
+  color: #fff;
+  border-color: #E11313;
+  text-decoration: none;
+}
+
+.music-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+} 
+
+.upcoming-shows-container {
+  text-align: left;
+}
+
+.upcoming-shows-container h2, .upcoming-shows-container h3 {
+  margin: 24px 0;
+}
+
+.upcoming-shows-container dl {
+  margin-bottom: 48px;
 }
 
 .container {
@@ -89,7 +133,7 @@ h3 {
 }
 
 .container.full {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container.hero {
@@ -101,7 +145,7 @@ h3 {
 
 .container.merch {
   height: 100vh;
-  background-color: #fff;
+  background-color: #B40001;
   color: #121212;
 }
 
@@ -162,6 +206,21 @@ iframe {
   text-align: center;
 }
 
+.album-art-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 36px;
+}
+
+.album-art {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: 1px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .single-art-container {
   display: flex;
   justify-content: center;
@@ -173,7 +232,7 @@ iframe {
   width: 100%;
   max-width: 800px;
   height: auto;
-  border: 2px solid #e0e0e0;
+  border: 1px solid #333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -203,13 +262,21 @@ dd {
 
 a {
   display: block;
-  color: #e0e0e0;
+  color: #E11313;
   text-decoration: none;
   margin: 5px 0;
+  transition: color 0.3s ease-out;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #fff;
+}
+
+.social a {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 8px 16px;
 }
 
 .align-center {
@@ -229,8 +296,17 @@ a:hover {
     font-size: 0.875em;
   }
 
+  dd {
+    margin-inline-start: 24px;
+    margin-bottom: 16px
+  }
+
   .container.band {
     max-height: 45vh;
+  }
+
+  .container {
+    padding: 16px;
   }
 
   iframe {
