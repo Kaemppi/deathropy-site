@@ -47,6 +47,12 @@ hr {
   color: #333
 }
 
+p {
+  font-size: 1.25em;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
 .highlight {
   color: #E11313;
 }
@@ -251,6 +257,12 @@ dd {
   margin-bottom: 10px;
 }
 
+.paragraph-block {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .spotify-embed {
   width: 100%;
   max-width: 800px;
@@ -296,6 +308,12 @@ a:hover {
     font-size: 0.875em;
   }
 
+  p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin: 16px 0;
+  }
+
   dd {
     margin-inline-start: 24px;
     margin-bottom: 16px
@@ -314,8 +332,13 @@ a:hover {
   }
 
   .band-members {
-    gap: 0;
-    bottom: 0;
+    gap: 16px;
+    bottom: 32px;
+  }
+
+  .member h4 {
+    font-size: 0.875em;
+    margin: 0;
   }
 
   .overlay {
