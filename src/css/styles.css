@@ -57,6 +57,10 @@ p {
   color: #E11313;
 }
 
+.inline {
+  display: inline;
+}
+
 .strike {
   text-decoration: line-through;
 }
@@ -71,6 +75,10 @@ p {
   display: inline-block;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.call-to-action.inline {
+  margin: 0;
 }
 
 .call-to-action.white {
@@ -254,7 +262,11 @@ dt {
 }
 
 dd {
-  margin-bottom: 10px;
+  margin-bottom: 36px;
+}
+
+dd p {
+  margin: 0;
 }
 
 .paragraph-block {
@@ -316,7 +328,7 @@ a:hover {
 
   dd {
     margin-inline-start: 24px;
-    margin-bottom: 16px
+    margin-bottom: 36px
   }
 
   .container.band {
